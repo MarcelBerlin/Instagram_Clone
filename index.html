@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="./img/network.png" type="image/x-icon">
+    <script src="script.js"></script>
+    <script src="templates.js"></script>
+    <script src="database.js"></script>
+    <title>InstaLino</title>
+</head>
+
+<body onload="init()">
+
+    <!-- header -->
+
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html">
+            <div class="header-headline"><span class="header-text">InstaLino</span></div>
+        </a>
+
+        <!-- Search -->
+        <div class="search-line">
+            <img src="img/lupe.png">
+            <input class="search" type="text" placeholder="Suchen">
+        </div>
+
+        <!-- Menu -->
+
+        
+            <nav class="nav">
+                <a href="index.html"><img src="img/home-icon.png"></a>
+                <img src="img/send.png" onclick="inConstruction()">
+                <img src="img/plus.png" onclick="openHidden()">
+                <img src="img/heart.png" onclick="inConstruction()">
+                <img class="profile-pic" src="img/profile-marcel.png" onclick="inConstruction()">
+            </nav>
+       
+        <!-- Responsive Menu -->
+
+        <div class="hamburger d-none">
+            <img src="./img/menu.png" onclick="openResponsive()">
+        </div>
+
+    </header>
+
+    <div  id="responsive-nav" class="responsive-nav-bg d-none">
+        <nav class="responsive-nav">
+            <a href="index.html"><img src="img/home-icon.png"></a>
+            <img src="img/send.png" onclick="inConstruction()">
+            <img src="img/plus.png" onclick="openHidden()">
+            <img src="img/heart.png" onclick="inConstruction()">
+            <img class="profile-pic" src="img/profile-marcel.png" onclick="inConstruction()">
+        </nav>
+    </div>
+
+    <!-- hidden windows  -->
+
+
+    <div id="hidden-add" class="hidden-bg d-none">
+        <img class="hidden-close" src="img/close .png" onclick="closeHidden()">
+        <div class="hidden-over-box">
+            <div class="hidden-box">
+                <div class="hidden-head"><span>Neuen Beitrag erstellen</span></div>
+                <div class="hidden-staple"><img src="img/stapel.png"></div>
+                <div class="hidden-staple-text"><span class="staple-text">Ziehe Fotos und Videos hierher</span></div>
+                <div class="hidden-button" onclick="inConstruction()">Vom Computer auswählen</div></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="hidden-details" class="hidden-bg d-none">
+        <img class="hidden-close" src="img/close .png" onclick="closeDetails()">
+        <div class="hidden-over-box">
+            <div class="hidden-detail-box">
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span class="detail-red">Melden</span>
+                </div>
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span class="detail-red">Nicht mehr
+                        folgen</span></div>
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span>Beitrag ansehen</span></div>
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span>Teilen in ...</span></div>
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span>Link kopieren</span></div>
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span>Einbetten</span></div>
+                <div class="hidden-detail-fields" onclick="inConstruction()"><span>Abbrechen</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Topline User -->
+
+
+    <!-- posts -->
+
+    <div class="main-container">
+        <div class="left-container">
+            <div class="topline-container">
+                <div class="topline">
+                    <a href="#">
+                        <div class="user"><img src="img/profile-1.jpg"><span>Becci86</span></div>
+                    </a>
+                    <a href="#">
+                        <div class="user"><img src="img/profile-2.jpg"><span>Freddy_FR</span></div>
+                    </a>
+                    <a href="#">
+                        <div class="user"><img src="img/profile-3.jpg"><span>Manuel</span></div>
+                    </a>
+                    <a href="#">
+                        <div class="user"><img src="img/profile-4.jpg"><span>Oli-VR</span></div>
+                    </a>
+                    <a href="#">
+                        <div class="user"><img src="img/profile-5.jpg"><span>Marcoooo</span></div>
+                    </a>
+                </div>
+            </div>
+            <div id="postcontainer" class="container"></div>
+        </div>
+        <div class="right-container">
+            <div class="side-profile-sticky">
+                <div class="side-profile">
+                    <div class="userprofile">
+                        <img src="img/profile-marcel.png">
+                        <div class="names">
+                            <span class="username">Marcel.BePunkt</span>
+                            <span class="identity">Marcel85</span>
+                        </div>
+                    </div>
+                    <span class="switch" onclick="inConstruction()">Wechseln</span>
+                </div>
+                <div class="proposals">
+                    <div class="proposal-headline">
+                        <span class="identity">Vorschläge für Dich</span>
+                        <span class="small-font" onclick="inConstruction()">Alle ansehen</span>
+                    </div>
+                    <div class="proposal-user">
+                        <div>
+                            <div class="userprofile">
+                                <img src="img/JayJay88.jpg">
+                                <div class="userprofile-text">
+                                    <div class="names">
+                                        <span class="username">JayJay88</span>
+                                        <span class="identity">Jansen88</span>
+                                    </div>
+                                    <span class="switch" onclick="inConstruction()">Folgen</span>
+                                </div>
+                            </div>
+
+                            <div class="userprofile">
+                                <img src="img/Leonie09.jpg">
+                                <div class="userprofile-text">
+                                    <div class="names">
+                                        <span class="username">Leo-Nie</span>
+                                        <span class="identity">Leonie09</span>
+                                    </div>
+                                    <span class="switch" onclick="inConstruction()">Folgen</span>
+                                </div>
+                            </div>
+
+                            <div class="userprofile">
+                                <img src="img/Sven_IT.jpg">
+                                <div class="userprofile-text">
+                                    <div class="names">
+                                        <span class="username">Sven_IT</span>
+                                        <span class="identity">Sven_Nameless</span>
+                                    </div>
+                                    <span class="switch" onclick="inConstruction()">Folgen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <a href="#">AGB</a>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
