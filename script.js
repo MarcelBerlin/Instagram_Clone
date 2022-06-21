@@ -89,11 +89,15 @@ function favourite(i) {
 
 function openResponsive() {
     document.getElementById('responsive-nav').classList.remove('d-none');
+    document.getElementById('hamburger').classList.add('d-none');
+    document.getElementById('close-responsive').classList.remove('d-none');
 
 }
 
 function closeResponsive() {
     document.getElementById('responsive-nav').classList.add('d-none');
+    document.getElementById('close-responsive').classList.add('d-none');
+    document.getElementById('hamburger').classList.remove('d-none');
 }
 
 

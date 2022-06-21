@@ -45,7 +45,8 @@
         <!-- Responsive Menu -->
 
         <div class="hamburger d-none">
-            <img src="./img/menu.png" onclick="openResponsive()">
+            <img src="./img/menu.png" id="hamburger" onclick="openResponsive()">
+            <img src="./img/close .png" class="d-none" id="close-responsive" onclick="closeResponsive()">
         </div>
 
     </header>
@@ -88,7 +89,7 @@
                 <div class="hidden-detail-fields" onclick="inConstruction()"><span>Teilen in ...</span></div>
                 <div class="hidden-detail-fields" onclick="inConstruction()"><span>Link kopieren</span></div>
                 <div class="hidden-detail-fields" onclick="inConstruction()"><span>Einbetten</span></div>
-                <div class="hidden-detail-fields" onclick="inConstruction()"><span>Abbrechen</span></div>
+                <div class="hidden-detail-fields" onclick="closeDetails()"><span>Abbrechen</span></div>
             </div>
         </div>
     </div>
